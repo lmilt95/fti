@@ -6,15 +6,7 @@ spring:
     url: postgres://mkwlwrhb:tC21SG1xPsGvumLz6JRom0uNaIl2oUSS@flora.db.elephantsql.com/mkwlwrhb
     username: mkwlwrhb
     password: tC21SG1xPsGvumLz6JRom0uNaIl2oUSS
-  # JPA properties
-  jpa:
-    hibernate.ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
 # Server configuration
 server:
   port: 8080
-# Security configuration
-security:
-  user:
-    name: user
-password: user
+
