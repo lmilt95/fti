@@ -3,6 +3,8 @@ on:
   push:
     branches: ['master']
 env:
+
+  # put Database secrets from elepahnt sql
   DATABASE_URL: ${{ secrets.DATABASE_URL }}
   DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
   DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
@@ -22,6 +24,7 @@ jobs:
       - name: Publish to Docker Hub
         uses: docker/build-push-action@v1
         with:
+          # put docker hub secrets variables
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
           repository: merkoadelina/fti
