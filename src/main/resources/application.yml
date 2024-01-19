@@ -3,15 +3,11 @@ spring:
   # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-<<<<<<< HEAD
+
     url: jdbc:postgresql://${DATABASE_URL}
     username: ${DATABASE_USERNAME}
     password: ${DATABASE_PASSWORD}
-=======
-    url: jdbc:postgresql://trumpet.db.elephantsql.com/khbigqkv
-    username: khbigqkv
-    password: O2uQHu004jkxteHRUA3e-jwVntI0-0Fd
->>>>>>> 1e08c4e6724e59249c577b726b50689da3383721
+
   # JPA properties
   jpa:
     hibernate.ddl-auto: update
