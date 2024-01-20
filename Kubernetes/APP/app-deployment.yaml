@@ -17,6 +17,7 @@ spec:
     spec:
       containers:
         - name: labs
+          # merkoadelina dockerhub username , fti repo
           image: merkoadelina/fti:latest
           imagePullPolicy: Always
           ports:
