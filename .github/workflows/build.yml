@@ -24,8 +24,7 @@ jobs:
         uses: docker/build-push-action@v1
         with:
           # put docker hub secrets variables
-        # updated docker hub password
-
+        # updated docker hub password and username
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD}}
           repository: merkoadelina/fti
