@@ -11,9 +11,7 @@ public class SpringBootRestApiPostgresqlApplicationTests {
 
     @Test
     public void contextLoads() {
-        // Add assertions to check conditions within the loaded context
-        assertNotNull("Application context should not be null");
-        // Add more assertions as needed
+ 
     }
 
 }
