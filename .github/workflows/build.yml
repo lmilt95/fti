@@ -28,6 +28,6 @@ jobs:
         # updated docker hub password
 
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD}}
           repository: merkoadelina/fti
           tags: latest
