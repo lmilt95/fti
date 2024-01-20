@@ -3,7 +3,6 @@ on:
   push:
     branches: ['main']
 env:
-
   # put Database secrets from elepahnt sql
   DATABASE_URL: ${{ secrets.DATABASE_URL }}
   DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
