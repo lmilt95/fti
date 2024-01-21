@@ -1,53 +1,34 @@
+# app deployment file
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name: lab
+  labels:
+    app: lab
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend
+      app: lab
   template:
     metadata:
       labels:
-        app: backend
+        app: lab
     spec:
       containers:
-      - name: backend
-        image: lmilt95/fti:latest
-        imagePullPolicy: Always
-        securityContext:
-          allowPrivilegeEscalation: false
-          runAsUser: 10001
-          seccompProfile:
-            type: RuntimeDefault
-          runAsNonRoot: true
-          readOnlyRootFilesystem: true
-          capabilities:
-            drop:
-            - ALL
-        resources:
-          requests:
-            memory: "1024Mi"
-            cpu: "500m"
-          limits:
-            memory: "1024Mi"
-            cpu: "500m"
-        ports:
-        - containerPort: 8080
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 8080
-          initialDelaySeconds: 60
-          failureThreshold: 3
-          periodSeconds: 60
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 8080
-          initialDelaySeconds: 60
-          failureThreshold: 3
-          periodSeconds: 60
+        - name: lab
+          # merkoadelina dockerhub username , fti repo
+          image: merkoadelina/fti:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: logs-volume
+              mountPath: /var/logs
+      volumes:
+        - name: logs-volume
+          hostPath:
+            path: /var/logs
+            type: DirectoryOrCreate
 
-# kubectl apply -f app-deployment.yaml 
+# kubectl apply -f app-deployment.yaml

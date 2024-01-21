@@ -1,11 +1,19 @@
+# Logging configuration
+logging:
+  level:
+    com.hendisantika.springbootrestapipostgresql.controller: DEBUG
+    root: INFO
+  file:
+    name: '/var/logs/devops-labs-master.log'
 # Spring Boot configuration
 spring:
-  # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://trumpet.db.elephantsql.com/khbigqkv
-    username: khbigqkv
-    password: O2uQHu004jkxteHRUA3e-jwVntI0-0Fd
+  # updated database secretes on github secretes
+  # changed the secrets , error reading secretes
+    url: jdbc:postgresql://trumpet.db.elephantsql.com/xvjovsvi
+    username: xvjovsvi
+    password: pJkZ9IHgYOpMChkgq2b6PdAB5yNdgOvT
   # JPA properties
   jpa:
     hibernate.ddl-auto: update
@@ -17,4 +25,4 @@ server:
 security:
   user:
     name: user
-password: user
+  password: user
