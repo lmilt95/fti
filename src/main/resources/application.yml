@@ -11,7 +11,7 @@ spring:
     driver-class-name: org.postgresql.Driver
   # updated database secretes on github secretes
   # changed the secrets , error reading secretes
-    url: jdbc:postgres://flora.db.elephantsql.com/xvjovsvi
+    url: jdbc:postgresql://trumpet.db.elephantsql.com/xvjovsvi
     username: xvjovsvi
     password: pJkZ9IHgYOpMChkgq2b6PdAB5yNdgOvT
   # JPA properties
