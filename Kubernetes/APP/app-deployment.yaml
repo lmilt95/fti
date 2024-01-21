@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: labs
+  name: lab
   labels:
-    app: labs
+    app: lab
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: labs
+      app: lab
   template:
     metadata:
       labels:
-        app: labs
+        app: lab
     spec:
       containers:
-        - name: labs
+        - name: lab
           # merkoadelina dockerhub username , fti repo
           image: merkoadelina/fti:latest
           imagePullPolicy: Always
